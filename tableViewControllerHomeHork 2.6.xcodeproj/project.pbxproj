@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		686D4FD524F66E4200DB4750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D4FD424F66E4200DB4750 /* AppDelegate.swift */; };
 		686D4FD724F66E4200DB4750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D4FD624F66E4200DB4750 /* SceneDelegate.swift */; };
-		686D4FD924F66E4200DB4750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D4FD824F66E4200DB4750 /* ViewController.swift */; };
 		686D4FDC24F66E4200DB4750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686D4FDA24F66E4200DB4750 /* Main.storyboard */; };
 		686D4FDE24F66E4300DB4750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686D4FDD24F66E4300DB4750 /* Assets.xcassets */; };
 		686D4FE124F66E4300DB4750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686D4FDF24F66E4300DB4750 /* LaunchScreen.storyboard */; };
+		686D4FE924F66EBA00DB4750 /* TableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D4FE824F66EBA00DB4750 /* TableTableViewController.swift */; };
+		686D4FEB24F6A08B00DB4750 /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D4FEA24F6A08B00DB4750 /* PersonInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		686D4FD124F66E4200DB4750 /* tableViewControllerHomeHork 2.6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tableViewControllerHomeHork 2.6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		686D4FD424F66E4200DB4750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686D4FD624F66E4200DB4750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		686D4FD824F66E4200DB4750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		686D4FDB24F66E4200DB4750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		686D4FDD24F66E4300DB4750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686D4FE024F66E4300DB4750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		686D4FE224F66E4300DB4750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		686D4FE824F66EBA00DB4750 /* TableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
+		686D4FEA24F6A08B00DB4750 /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				686D4FD424F66E4200DB4750 /* AppDelegate.swift */,
 				686D4FD624F66E4200DB4750 /* SceneDelegate.swift */,
-				686D4FD824F66E4200DB4750 /* ViewController.swift */,
+				686D4FE824F66EBA00DB4750 /* TableTableViewController.swift */,
+				686D4FEA24F6A08B00DB4750 /* PersonInfo.swift */,
 				686D4FDA24F66E4200DB4750 /* Main.storyboard */,
 				686D4FDD24F66E4300DB4750 /* Assets.xcassets */,
 				686D4FDF24F66E4300DB4750 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686D4FD924F66E4200DB4750 /* ViewController.swift in Sources */,
 				686D4FD524F66E4200DB4750 /* AppDelegate.swift in Sources */,
+				686D4FE924F66EBA00DB4750 /* TableTableViewController.swift in Sources */,
+				686D4FEB24F6A08B00DB4750 /* PersonInfo.swift in Sources */,
 				686D4FD724F66E4200DB4750 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
