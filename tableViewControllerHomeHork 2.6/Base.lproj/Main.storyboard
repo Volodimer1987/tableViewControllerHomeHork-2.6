@@ -3,10 +3,11 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts-->
+        <!--Persons List-->
         <scene sceneID="7EE-IS-qUV">
             <objects>
                 <tableViewController id="PM8-XR-b4B" customClass="TableTableViewController" customModule="tableViewControllerHomeHork_2_6" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Akz-wa-0dX" kind="show" id="KTl-RW-Iww"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,11 +33,78 @@
                             <outlet property="delegate" destination="PM8-XR-b4B" id="aac-Tk-x6h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="Aeo-Pc-ReZ"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="Aeo-Pc-ReZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hk5-CU-aMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="390" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aTo-uv-jN8">
+            <objects>
+                <viewController id="Akz-wa-0dX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFH-Na-9Yq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-b1-Trb">
+                                <rect key="frame" x="10" y="155" width="394" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="HFC-ZR-nRb">
+                                <rect key="frame" x="20" y="252" width="115" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhV-2V-ScR">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikp-IT-iCk">
+                                        <rect key="frame" x="0.0" y="46.5" width="115" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-rR-thX">
+                                <rect key="frame" x="143" y="252" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fht-yu-9bN">
+                                <rect key="frame" x="143" y="297.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lqm-0g-FBg" firstAttribute="trailing" secondItem="HFC-ZR-nRb" secondAttribute="trailing" constant="279" id="0y9-GU-qeW"/>
+                            <constraint firstItem="HFC-ZR-nRb" firstAttribute="leading" secondItem="lqm-0g-FBg" secondAttribute="leading" constant="20" id="3K0-SU-BsE"/>
+                            <constraint firstItem="lWy-rR-thX" firstAttribute="top" secondItem="Dcm-b1-Trb" secondAttribute="bottom" constant="61" id="AuO-X4-hEW"/>
+                            <constraint firstItem="HFC-ZR-nRb" firstAttribute="top" secondItem="Dcm-b1-Trb" secondAttribute="bottom" constant="61" id="E6r-MI-Tua"/>
+                            <constraint firstItem="Dcm-b1-Trb" firstAttribute="top" secondItem="lqm-0g-FBg" secondAttribute="top" constant="67" id="Fl0-Qm-adk"/>
+                            <constraint firstItem="Dcm-b1-Trb" firstAttribute="leading" secondItem="lqm-0g-FBg" secondAttribute="leading" constant="10" id="GcJ-5V-C0W"/>
+                            <constraint firstItem="fht-yu-9bN" firstAttribute="leading" secondItem="HFC-ZR-nRb" secondAttribute="trailing" constant="8" id="JgF-F3-8rA"/>
+                            <constraint firstItem="lqm-0g-FBg" firstAttribute="trailing" secondItem="Dcm-b1-Trb" secondAttribute="trailing" constant="10" id="YHF-XL-Jcg"/>
+                            <constraint firstItem="lWy-rR-thX" firstAttribute="leading" secondItem="HFC-ZR-nRb" secondAttribute="trailing" constant="8" id="c2X-1I-gnr"/>
+                            <constraint firstItem="fht-yu-9bN" firstAttribute="top" secondItem="lWy-rR-thX" secondAttribute="bottom" constant="25" id="eK0-SI-LIn"/>
+                            <constraint firstItem="lqm-0g-FBg" firstAttribute="trailing" secondItem="fht-yu-9bN" secondAttribute="trailing" constant="229" id="rk0-SE-lgq"/>
+                            <constraint firstItem="lqm-0g-FBg" firstAttribute="trailing" secondItem="lWy-rR-thX" secondAttribute="trailing" constant="229" id="tYX-SM-BGJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lqm-0g-FBg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qwo-Jn-ApP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gq4-oi-bJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182.608695652174" y="96.428571428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G48-J2-of8">

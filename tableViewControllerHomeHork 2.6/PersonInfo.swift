@@ -25,6 +25,7 @@ let personMails = [
                 "Kynicin@Mail.ru","Navalnii@Mail.ru","Kylchickii@Mail.ru","Zavorotnuk@Mail.ru","Stepanenko@Mail.ru",
                 "Bendera@Mail.ru","Mishin@Mail.ru","Kovach@Mail.ru","Mironova@Mail.ru","kozlova@Mail.ru"]
 
+var array = [0,1,2,3,4,5,6,7,8,9]
 
 struct Person {
     var name : String
@@ -32,13 +33,23 @@ struct Person {
     var phoneNumber:String
     var mail:String
     
+    static var indexNameTaking = array.shuffled()
+    static var indexSernameTaking = array.shuffled()
+    static var indexPhoneNumbersTaking = array.shuffled()
+    static var indexMailTaking = array.shuffled()
+    
+    
+    
  static func randomNameSernameArray() -> [Person] {
     
        var arrayForReturn = [Person]()
     
         while arrayForReturn.count != personsName.count {
         
-        let person = Person(name:personsName.randomElement() ?? " ", sername: personsSername.randomElement() ?? " ", phoneNumber: phoneNumbersForPersons.randomElement() ?? " ", mail: personMails.randomElement() ?? "")
+            let person = Person(name:personsName[Person.indexNameTaking.popLast()!],
+                                sername: personsSername[Person.indexSernameTaking.popLast()!],
+                                phoneNumber: phoneNumbersForPersons[Person.indexPhoneNumbersTaking.popLast()!],
+                                mail: personMails[Person.indexMailTaking.popLast()!])
         
             arrayForReturn.append(person)
         }
