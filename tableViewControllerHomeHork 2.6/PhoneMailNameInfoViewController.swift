@@ -10,9 +10,20 @@ import UIKit
 
 class PhoneMailNameInfoViewController: UIViewController {
 
+    @IBOutlet var NameSernameBigLabel: UILabel!
+    @IBOutlet var mailLabel: UILabel!
+    @IBOutlet var phoneNumber: UILabel!
+    
+    var nameSername:String!
+    var mail:String!
+    var phoneNumberFromOtherVC:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NameSernameBigLabel.text = nameSername
+        mailLabel.text = mail
+        phoneNumber.text = phoneNumberFromOtherVC
     }
     
 

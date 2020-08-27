@@ -43,13 +43,15 @@ struct Person {
  static func randomNameSernameArray() -> [Person] {
     
        var arrayForReturn = [Person]()
-    
-        while arrayForReturn.count != personsName.count {
         
+        while arrayForReturn.count != personsName.count {
+            
+            let popList = Person.indexSernameTaking.popLast()!
+            
             let person = Person(name:personsName[Person.indexNameTaking.popLast()!],
-                                sername: personsSername[Person.indexSernameTaking.popLast()!],
+                                sername: personsSername[popList],
                                 phoneNumber: phoneNumbersForPersons[Person.indexPhoneNumbersTaking.popLast()!],
-                                mail: personMails[Person.indexMailTaking.popLast()!])
+                                mail: personMails[popList])
         
             arrayForReturn.append(person)
         }
